@@ -67,7 +67,7 @@ dummy:
 ##############
 
 # ACTIVATE THE FSID VARIABLE FOR NON-VAGRANT DEPLOYMENT
-fsid: f7876559-7698-463d-bc1b-53a9892339c0
+#fsid: f7876559-7698-463d-bc1b-53a9892339c0
 #cephx: true
 
 # Devices to be used as OSDs

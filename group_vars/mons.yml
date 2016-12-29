@@ -18,8 +18,8 @@ dummy:
 #mon_group_name: mons
 
 # ACTIVATE BOTH FSID AND MONITOR_SECRET VARIABLES FOR NON-VAGRANT DEPLOYMENT
-fsid: f7876559-7698-463d-bc1b-53a9892339c0
-monitor_secret: AQAkn8tUiIowDRAAgBT4OsG5gYgn5smNomEVOQ==
+#fsid: f7876559-7698-463d-bc1b-53a9892339c0
+#monitor_secret: AQAkn8tUiIowDRAAgBT4OsG5gYgn5smNomEVOQ==
 #cephx: true
 
 # CephFS

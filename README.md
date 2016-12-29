@@ -23,8 +23,7 @@ And execute:
 `ansible-playbok site.yml`
 
 # Todo
-* Check if autogenerating FSID and Monitor Secret works.
-* Auto-add OSDS when new disks are presented.
+* Add osd-launcher service (https://github.com/borismattijssen/osd-launcher) to the ceph-osd role, such that disks are automatically prepared when new disks are attached.
 
 # Notes
 * The monitor_interface is set to `eth0`, change this when you're on a different OS (or even different cloud provider).

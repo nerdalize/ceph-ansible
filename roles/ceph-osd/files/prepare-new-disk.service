@@ -1,0 +1,9 @@
+[Unit]
+Description=Prepare a new disk to be used in the Ceph cluster, when it gets attached to the machine.
+
+[Service]
+TimeoutStartSec=0
+ExecStart=/usr/bin/bash /usr/local/bin/prepare-new-disk.sh
+
+[Install]
+WantedBy=ceph.target

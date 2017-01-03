@@ -52,3 +52,6 @@
   when: osd_containerized_deployment
   # Hard code this so we will skip the entire file instead of individual tasks (Default isn't Consistent)
   static: False
+
+- include: ./prepare-new-disk.yml
+  static: False

@@ -1,0 +1,30 @@
+---
+- name: copy prepare-new-disk script to remote
+  copy:
+    src: "{{role_path}}/files/prepare-new-disk.sh"
+    dest: /usr/local/bin/prepare-new-disk.sh
+    owner: "{{ activate_file_owner }}"
+    group: "{{ activate_file_group }}"
+    mode: 0755
+
+- name: copy prepare-new-disk service to remote
+  copy:
+    src: "{{role_path}}/files/prepare-new-disk.service"
+    dest: /etc/systemd/system/prepare-new-disk.service
+    owner: "{{ activate_file_owner }}"
+    group: "{{ activate_file_group }}"
+    mode: "{{ activate_file_mode }}"
+
+- name: enable prepare-new-disk service
+  command: systemctl enable /etc/systemd/system/prepare-new-disk.service
+  changed_when: false
+  failed_when: false
+  when:
+    - use_systemd
+
+- name: systemd start prepare-new-disk service
+  service:
+    name: prepare-new-disk
+    state: started
+    enabled: yes
+  changed_when: false
